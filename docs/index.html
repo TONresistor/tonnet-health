@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
+    <title>TONNET Network Status</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        pre {
+            margin: 0;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border: 1px solid #00ff00;
+            padding: 10px;
+        }
+        .header h1 {
+            font-size: 18px;
+            font-weight: normal;
+        }
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #00ff00;
+        }
+        .healthy { color: #00ff00; }
+        .degraded { color: #ffff00; }
+        .offline { color: #ff0000; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #00ff00;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background: #001100;
+        }
+        tr:hover {
+            background: #001a00;
+        }
+        .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-dot.healthy { background: #00ff00; }
+        .status-dot.degraded { background: #ffff00; }
+        .status-dot.offline { background: #ff0000; }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #00ff00;
+            font-size: 12px;
+        }
+        .score-bar {
+            width: 100%;
+            height: 20px;
+            background: #001100;
+            border: 1px solid #00ff00;
+            margin: 10px 0;
+        }
+        .score-fill {
+            height: 100%;
+            background: #00ff00;
+            transition: width 0.3s;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        .cursor {
+            animation: blink 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <pre>
+ _____ ___  _   _ _   _ _____ _____   _   _ _____    _    _   _____ _   _
+|_   _/ _ \| \ | | \ | | ____|_   _| | | | | ____|  / \  | | |_   _| | | |
+  | || | | |  \| |  \| |  _|   | |   | |_| |  _|   / _ \ | |   | | | |_| |
+  | || |_| | |\  | |\  | |___  | |   |  _  | |___ / ___ \| |___| | |  _  |
+  |_| \___/|_| \_|_| \_|_____| |_|   |_| |_|_____/_/   \_\_____|_| |_| |_|
+            </pre>
+            <h1>[ NETWORK STATUS MONITOR ]</h1>
+        </div>
+
+        <div id="content" class="loading">
+            <pre>Initializing<span class="cursor">_</span></pre>
+        </div>
+
+        <div class="footer">
+            <span id="last-update">Loading...</span> |
+            <span>Auto-refresh: 60s</span> |
+            <a href="https://github.com/TONresistor/tonnet-health" style="color: #00ff00;">GitHub</a>
+        </div>
+    </div>
+
+    <script>
+        async function loadStatus() {
+            try {
+                const response = await fetch('status.json?' + Date.now());
+                const data = await response.json();
+                renderStatus(data);
+            } catch (e) {
+                document.getElementById('content').innerHTML = `
+                    <pre class="offline">ERROR: Failed to load status.json</pre>
+                    <pre>${e.message}</pre>
+                `;
+            }
+        }
+
+        function renderStatus(data) {
+            if (data.error) {
+                document.getElementById('content').innerHTML = `<pre class="offline">ERROR: ${data.error}</pre>`;
+                return;
+            }
+
+            const health = data.network_health || {};
+            const relays = data.relays || [];
+            const score = Math.round((health.score || 0) * 100);
+
+            let statusClass = 'healthy';
+            if (score < 100 && score >= 50) statusClass = 'degraded';
+            if (score < 50) statusClass = 'offline';
+
+            let html = `
+                <div class="status-bar">
+                    <span>RELAYS: ${health.total_relays || 0}</span>
+                    <span class="healthy">HEALTHY: ${health.healthy || 0}</span>
+                    <span class="degraded">DEGRADED: ${health.degraded || 0}</span>
+                    <span class="offline">OFFLINE: ${health.offline || 0}</span>
+                </div>
+
+                <div>
+                    <pre>NETWORK SCORE: <span class="${statusClass}">${score}%</span></pre>
+                    <div class="score-bar">
+                        <div class="score-fill" style="width: ${score}%; background: ${statusClass === 'healthy' ? '#00ff00' : statusClass === 'degraded' ? '#ffff00' : '#ff0000'}"></div>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>RELAY</th>
+                            <th>STATUS</th>
+                            <th>METRICS</th>
+                            <th>CIRCUIT</th>
+                            <th>HTTP</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            for (const relay of relays) {
+                const status = relay.status || 'offline';
+                const metrics = relay.checks?.metrics;
+                const circuit = relay.checks?.circuit;
+                const http = relay.checks?.http;
+
+                html += `
+                    <tr>
+                        <td>
+                            <span class="status-dot ${status}"></span>
+                            ${relay.name}
+                        </td>
+                        <td class="${status}">${status.toUpperCase()}</td>
+                        <td>${metrics?.status === 'ok' ? metrics.latency_ms + 'ms' : '<span class="offline">FAIL</span>'}</td>
+                        <td>${circuit?.status === 'ok' ? circuit.latency_ms + 'ms' : '<span class="offline">FAIL</span>'}</td>
+                        <td>${http?.status === 'ok' ? http.latency_ms + 'ms' : '<span class="offline">FAIL</span>'}</td>
+                    </tr>
+                `;
+            }
+
+            html += `
+                    </tbody>
+                </table>
+            `;
+
+            document.getElementById('content').innerHTML = html;
+
+            const checkedAt = data.checked_at ? new Date(data.checked_at).toLocaleString() : 'Unknown';
+            document.getElementById('last-update').textContent = 'Last check: ' + checkedAt;
+        }
+
+        loadStatus();
+        setInterval(loadStatus, 60000);
+    </script>
+</body>
+</html>
