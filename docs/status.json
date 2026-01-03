@@ -1,12 +1,166 @@
 {
-  "checked_at": "2026-01-03T00:00:00Z",
+  "checked_at": "2026-01-03T10:55:00.278320513Z",
   "network_health": {
-    "total_relays": 0,
-    "healthy": 0,
+    "total_relays": 5,
+    "healthy": 5,
     "degraded": 0,
     "offline": 0,
-    "score": 0
+    "score": 1
   },
-  "relays": [],
-  "message": "Waiting for first health check..."
+  "relays": [
+    {
+      "name": "relayer1",
+      "address": "80.78.27.15:9001",
+      "roles": [
+        "entry",
+        "middle",
+        "exit"
+      ],
+      "status": "healthy",
+      "checks": {
+        "metrics": {
+          "status": "ok",
+          "latency_ms": 243,
+          "version": "go1.25.5 X:nodwarf5",
+          "circuits_active": 644,
+          "bytes_received": 1,
+          "bytes_sent": 3
+        },
+        "circuit": {
+          "status": "ok",
+          "latency_ms": 620,
+          "circuit_id": "1737edad"
+        },
+        "http": {
+          "status": "ok",
+          "latency_ms": 361,
+          "status_code": 200,
+          "test_site": "tonnet-sync-check.ton"
+        }
+      }
+    },
+    {
+      "name": "relayer2",
+      "address": "80.78.25.121:9001",
+      "roles": [
+        "entry",
+        "middle",
+        "exit"
+      ],
+      "status": "healthy",
+      "checks": {
+        "metrics": {
+          "status": "ok",
+          "latency_ms": 250,
+          "version": "go1.25.5 X:nodwarf5",
+          "circuits_active": 637,
+          "bytes_received": 7,
+          "bytes_sent": 3
+        },
+        "circuit": {
+          "status": "ok",
+          "latency_ms": 643,
+          "circuit_id": "f12ad5c1"
+        },
+        "http": {
+          "status": "ok",
+          "latency_ms": 357,
+          "status_code": 200,
+          "test_site": "tonnet-sync-check.ton"
+        }
+      }
+    },
+    {
+      "name": "relayer3",
+      "address": "80.78.27.23:9001",
+      "roles": [
+        "entry",
+        "middle",
+        "exit"
+      ],
+      "status": "healthy",
+      "checks": {
+        "metrics": {
+          "status": "ok",
+          "latency_ms": 292,
+          "version": "go1.25.5 X:nodwarf5",
+          "circuits_active": 639,
+          "bytes_received": 1,
+          "bytes_sent": 3
+        },
+        "circuit": {
+          "status": "ok",
+          "latency_ms": 635,
+          "circuit_id": "c74cb5a9"
+        },
+        "http": {
+          "status": "ok",
+          "latency_ms": 343,
+          "status_code": 200,
+          "test_site": "tonnet-sync-check.ton"
+        }
+      }
+    },
+    {
+      "name": "relayer4",
+      "address": "80.78.25.177:9001",
+      "roles": [
+        "entry",
+        "middle",
+        "exit"
+      ],
+      "status": "healthy",
+      "checks": {
+        "metrics": {
+          "status": "ok",
+          "latency_ms": 242,
+          "version": "go1.25.5 X:nodwarf5",
+          "circuits_active": 645,
+          "bytes_received": 4,
+          "bytes_sent": 2
+        },
+        "circuit": {
+          "status": "ok",
+          "latency_ms": 627,
+          "circuit_id": "16219956"
+        },
+        "http": {
+          "status": "ok",
+          "latency_ms": 363,
+          "status_code": 200,
+          "test_site": "tonnet-sync-check.ton"
+        }
+      }
+    },
+    {
+      "name": "relayer5",
+      "address": "46.62.171.242:9001",
+      "roles": [
+        "entry",
+        "middle"
+      ],
+      "status": "healthy",
+      "checks": {
+        "metrics": {
+          "status": "ok",
+          "latency_ms": 284,
+          "version": "go1.25.5 X:nodwarf5",
+          "circuits_active": 9,
+          "bytes_received": 858844,
+          "bytes_sent": 95684
+        },
+        "circuit": {
+          "status": "ok",
+          "latency_ms": 685,
+          "circuit_id": "a2c485ec"
+        },
+        "http": {
+          "status": "ok",
+          "latency_ms": 408,
+          "status_code": 200,
+          "test_site": "tonnet-sync-check.ton"
+        }
+      }
+    }
+  ]
 }
