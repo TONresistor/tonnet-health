@@ -21,15 +21,17 @@ jobs:
       - name: Build health checker
         run: go build -o tonnet-health ./cmd
 
-      - name: Download tonnet-proxy
+      - name: Clone and build tonnet-proxy
         run: |
-          curl -L -o tonnet-proxy https://github.com/TONresistor/tonnet-proxy/releases/download/v0.1.0/tonnet-proxy-linux-amd64 || echo "Using mock proxy"
-          chmod +x tonnet-proxy || true
+          git clone https://github.com/TONresistor/tonnet-proxy.git /tmp/tonnet-proxy
+          cd /tmp/tonnet-proxy
+          go build -o tonnet-proxy ./cmd
+          mv tonnet-proxy $GITHUB_WORKSPACE/
 
       - name: Run health check
         run: |
-          ./tonnet-health --proxy ./tonnet-proxy --json > docs/status.json 2>&1 || echo '{"error": "check failed"}' > docs/status.json
-        continue-on-error: true
+          ./tonnet-health --proxy ./tonnet-proxy --json > docs/status.json 2>&1
+        timeout-minutes: 10
 
       - name: Update timestamp
         run: |
