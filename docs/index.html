@@ -414,7 +414,7 @@
                             ? `<span class="latency ${formatLatency(metrics.latency_ms)}">${metrics.latency_ms}ms</span>`
                             : '<span class="badge offline">Fail</span>'}</td>
                         <td>${circuit?.status === 'ok'
-                            ? `<span class="latency ${formatLatency(circuit.latency_ms)}">${circuit.latency_ms}ms</span>`
+                            ? `<span class="latency">${circuit.latency_ms}ms</span>`
                             : '<span class="badge offline">Fail</span>'}</td>
                         <td>${http?.status === 'ok'
                             ? `<span class="latency ${formatLatency(http.latency_ms)}">${http.latency_ms}ms</span>`
