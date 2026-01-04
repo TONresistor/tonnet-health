@@ -325,6 +325,9 @@
         }
 
         function renderStatus(data) {
+            const checkedAt = data.checked_at ? new Date(data.checked_at).toLocaleString() : 'Unknown';
+            document.getElementById('last-update').textContent = 'Last check: ' + checkedAt;
+
             if (data.error) {
                 document.getElementById('content').innerHTML = `
                     <div class="score-section">
@@ -426,9 +429,6 @@
             `;
 
             document.getElementById('content').innerHTML = html;
-
-            const checkedAt = data.checked_at ? new Date(data.checked_at).toLocaleString() : 'Unknown';
-            document.getElementById('last-update').textContent = 'Last check: ' + checkedAt;
         }
 
         loadStatus();
