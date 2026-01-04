@@ -6,124 +6,316 @@
     <meta http-equiv="refresh" content="60">
     <title>TONNET Network Status</title>
     <style>
+        :root {
+            --bg-primary: #17212B;
+            --bg-secondary: #232E3C;
+            --bg-tertiary: #1E2937;
+            --ton-blue: #0098EA;
+            --ton-blue-hover: #0088D1;
+            --text-primary: #FFFFFF;
+            --text-secondary: #8E99A4;
+            --text-muted: #6C7883;
+            --success: #31D158;
+            --warning: #FFB800;
+            --error: #FF5454;
+            --border: #2B3945;
+            --border-light: #3A4A5C;
+        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            background: #0a0a0a;
-            color: #00ff00;
-            font-family: 'Courier New', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             font-size: 14px;
-            line-height: 1.4;
+            line-height: 1.5;
             padding: 20px;
+            min-height: 100vh;
         }
         .container {
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
         }
         pre {
             margin: 0;
+            font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
         }
         .header {
             text-align: center;
-            margin-bottom: 20px;
-            border: 1px solid #00ff00;
-            padding: 10px;
+            margin-bottom: 24px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid var(--border);
+        }
+        .header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .header .ton-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--ton-blue) 0%, #0077CC 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
         }
         .header h1 {
-            font-size: 18px;
-            font-weight: normal;
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+        }
+        .header p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-top: 4px;
         }
         .status-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .status-card {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: border-color 0.2s;
+        }
+        .status-card:hover {
+            border-color: var(--border-light);
+        }
+        .status-card .label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .status-card .value {
+            font-size: 28px;
+            font-weight: 600;
+        }
+        .status-card.total .value { color: var(--ton-blue); }
+        .status-card.healthy .value { color: var(--success); }
+        .status-card.degraded .value { color: var(--warning); }
+        .status-card.offline .value { color: var(--error); }
+        .healthy { color: var(--success); }
+        .degraded { color: var(--warning); }
+        .offline { color: var(--error); }
+        .score-section {
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .score-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #00ff00;
+            align-items: center;
+            margin-bottom: 12px;
         }
-        .healthy { color: #00ff00; }
-        .degraded { color: #ffff00; }
-        .offline { color: #ff0000; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
+        .score-header .label {
+            font-size: 14px;
+            color: var(--text-secondary);
         }
-        th, td {
-            border: 1px solid #00ff00;
-            padding: 8px 12px;
-            text-align: left;
-        }
-        th {
-            background: #001100;
-        }
-        tr:hover {
-            background: #001a00;
-        }
-        .status-dot {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-        .status-dot.healthy { background: #00ff00; }
-        .status-dot.degraded { background: #ffff00; }
-        .status-dot.offline { background: #ff0000; }
-        .footer {
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #00ff00;
-            font-size: 12px;
+        .score-header .value {
+            font-size: 20px;
+            font-weight: 600;
         }
         .score-bar {
             width: 100%;
-            height: 20px;
-            background: #001100;
-            border: 1px solid #00ff00;
-            margin: 10px 0;
+            height: 8px;
+            background: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
         }
         .score-fill {
             height: 100%;
-            background: #00ff00;
-            transition: width 0.3s;
+            background: var(--success);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        .score-fill.degraded { background: var(--warning); }
+        .score-fill.offline { background: var(--error); }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 20px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        tr:hover td {
+            background: rgba(0, 152, 234, 0.05);
+        }
+        .status-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 8px currentColor;
+        }
+        .status-dot.healthy {
+            background: var(--success);
+            box-shadow: 0 0 8px var(--success);
+        }
+        .status-dot.degraded {
+            background: var(--warning);
+            box-shadow: 0 0 8px var(--warning);
+        }
+        .status-dot.offline {
+            background: var(--error);
+            box-shadow: 0 0 8px var(--error);
+        }
+        .relay-name {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        .latency {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .latency.good { color: var(--success); }
+        .latency.slow { color: var(--warning); }
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        .badge.healthy {
+            background: rgba(49, 209, 88, 0.15);
+            color: var(--success);
+        }
+        .badge.degraded {
+            background: rgba(255, 184, 0, 0.15);
+            color: var(--warning);
+        }
+        .badge.offline {
+            background: rgba(255, 84, 84, 0.15);
+            color: var(--error);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .footer a {
+            color: var(--ton-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: var(--ton-blue-hover);
+        }
+        .footer .separator {
+            margin: 0 12px;
+            color: var(--border);
         }
         .loading {
             text-align: center;
-            padding: 40px;
+            padding: 60px 20px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border: 1px solid var(--border);
         }
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border);
+            border-top-color: var(--ton-blue);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
         }
-        .cursor {
-            animation: blink 1s infinite;
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .loading-text {
+            color: var(--text-secondary);
+        }
+        @media (max-width: 640px) {
+            .status-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .header h1 {
+                font-size: 20px;
+            }
+            th, td {
+                padding: 10px 12px;
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <pre>
- _____ ___  _   _ _   _ _____ _____   _   _ _____    _    _   _____ _   _
-|_   _/ _ \| \ | | \ | | ____|_   _| | | | | ____|  / \  | | |_   _| | | |
-  | || | | |  \| |  \| |  _|   | |   | |_| |  _|   / _ \ | |   | | | |_| |
-  | || |_| | |\  | |\  | |___  | |   |  _  | |___ / ___ \| |___| | |  _  |
-  |_| \___/|_| \_|_| \_|_____| |_|   |_| |_|_____/_/   \_\_____|_| |_| |_|
-            </pre>
-            <h1>[ NETWORK STATUS MONITOR ]</h1>
+            <div class="logo">
+                <div class="ton-icon">
+                    <svg width="28" height="28" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56Z" fill="white" fill-opacity="0"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8 16H37.2C39.5 16 41.3 16.6 42.4 17.8C43.6 19 44.1 20.7 43.7 22.7L38.7 42.1C38.2 44.4 36.4 46 33.9 46H22.1C19.6 46 17.8 44.4 17.3 42.1L12.3 22.7C11.9 20.7 12.4 19 13.6 17.8C14.7 16.6 16.5 16 18.8 16ZM27 36V24L21 32H27V36ZM29 36V32H35L29 24V36Z" fill="white"/>
+                    </svg>
+                </div>
+                <h1>TONNET Health</h1>
+            </div>
+            <p>Network Status Monitor</p>
         </div>
 
         <div id="content" class="loading">
-            <pre>Initializing<span class="cursor">_</span></pre>
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading network status...</div>
         </div>
 
         <div class="footer">
-            <span id="last-update">Loading...</span> |
-            <span>Auto-refresh: 60s</span> |
-            <a href="https://github.com/TONresistor/tonnet-health" style="color: #00ff00;">GitHub</a>
+            <span id="last-update">Loading...</span>
+            <span class="separator">|</span>
+            <span>Auto-refresh: 60s</span>
+            <span class="separator">|</span>
+            <a href="https://github.com/TONresistor/tonnet-health">GitHub</a>
         </div>
     </div>
 
@@ -143,7 +335,12 @@
 
         function renderStatus(data) {
             if (data.error) {
-                document.getElementById('content').innerHTML = `<pre class="offline">ERROR: ${data.error}</pre>`;
+                document.getElementById('content').innerHTML = `
+                    <div class="score-section">
+                        <div class="offline" style="text-align: center; padding: 20px;">
+                            <strong>Error:</strong> ${data.error}
+                        </div>
+                    </div>`;
                 return;
             }
 
@@ -155,28 +352,49 @@
             if (score < 100 && score >= 50) statusClass = 'degraded';
             if (score < 50) statusClass = 'offline';
 
+            const formatLatency = (ms) => {
+                if (ms < 100) return 'good';
+                if (ms < 500) return '';
+                return 'slow';
+            };
+
             let html = `
                 <div class="status-bar">
-                    <span>RELAYS: ${health.total_relays || 0}</span>
-                    <span class="healthy">HEALTHY: ${health.healthy || 0}</span>
-                    <span class="degraded">DEGRADED: ${health.degraded || 0}</span>
-                    <span class="offline">OFFLINE: ${health.offline || 0}</span>
+                    <div class="status-card total">
+                        <div class="label">Total Relays</div>
+                        <div class="value">${health.total_relays || 0}</div>
+                    </div>
+                    <div class="status-card healthy">
+                        <div class="label">Healthy</div>
+                        <div class="value">${health.healthy || 0}</div>
+                    </div>
+                    <div class="status-card degraded">
+                        <div class="label">Degraded</div>
+                        <div class="value">${health.degraded || 0}</div>
+                    </div>
+                    <div class="status-card offline">
+                        <div class="label">Offline</div>
+                        <div class="value">${health.offline || 0}</div>
+                    </div>
                 </div>
 
-                <div>
-                    <pre>NETWORK SCORE: <span class="${statusClass}">${score}%</span></pre>
+                <div class="score-section">
+                    <div class="score-header">
+                        <span class="label">Network Health Score</span>
+                        <span class="value ${statusClass}">${score}%</span>
+                    </div>
                     <div class="score-bar">
-                        <div class="score-fill" style="width: ${score}%; background: ${statusClass === 'healthy' ? '#00ff00' : statusClass === 'degraded' ? '#ffff00' : '#ff0000'}"></div>
+                        <div class="score-fill ${statusClass}" style="width: ${score}%"></div>
                     </div>
                 </div>
 
                 <table>
                     <thead>
                         <tr>
-                            <th>RELAY</th>
-                            <th>STATUS</th>
-                            <th>METRICS</th>
-                            <th>CIRCUIT</th>
+                            <th>Relay</th>
+                            <th>Status</th>
+                            <th>Metrics</th>
+                            <th>Circuit</th>
                             <th>HTTP</th>
                         </tr>
                     </thead>
@@ -192,13 +410,21 @@
                 html += `
                     <tr>
                         <td>
-                            <span class="status-dot ${status}"></span>
-                            ${relay.name}
+                            <span class="relay-name">
+                                <span class="status-dot ${status}"></span>
+                                ${relay.name}
+                            </span>
                         </td>
-                        <td class="${status}">${status.toUpperCase()}</td>
-                        <td>${metrics?.status === 'ok' ? metrics.latency_ms + 'ms' : '<span class="offline">FAIL</span>'}</td>
-                        <td>${circuit?.status === 'ok' ? circuit.latency_ms + 'ms' : '<span class="offline">FAIL</span>'}</td>
-                        <td>${http?.status === 'ok' ? http.latency_ms + 'ms' : '<span class="offline">FAIL</span>'}</td>
+                        <td><span class="badge ${status}">${status}</span></td>
+                        <td>${metrics?.status === 'ok'
+                            ? `<span class="latency ${formatLatency(metrics.latency_ms)}">${metrics.latency_ms}ms</span>`
+                            : '<span class="badge offline">Fail</span>'}</td>
+                        <td>${circuit?.status === 'ok'
+                            ? `<span class="latency ${formatLatency(circuit.latency_ms)}">${circuit.latency_ms}ms</span>`
+                            : '<span class="badge offline">Fail</span>'}</td>
+                        <td>${http?.status === 'ok'
+                            ? `<span class="latency ${formatLatency(http.latency_ms)}">${http.latency_ms}ms</span>`
+                            : '<span class="badge offline">Fail</span>'}</td>
                     </tr>
                 `;
             }
