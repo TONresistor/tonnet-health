@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-01-07T23:11:04.411506394Z",
+  "checked_at": "2026-01-07T23:31:39.128922522Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 2,
@@ -20,20 +20,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 200,
+          "latency_ms": 241,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1955,
+          "circuits_active": 1959,
           "bytes_received": 1,
           "bytes_sent": 4
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 555,
-          "circuit_id": "1f67460c"
+          "latency_ms": 612,
+          "circuit_id": "a0b7334e"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 573,
+          "latency_ms": 365,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 200,
+          "latency_ms": 241,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1190,
+          "circuits_active": 1192,
           "bytes_received": 7,
           "bytes_sent": 3
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 554,
-          "circuit_id": "837aff58"
+          "latency_ms": 611,
+          "circuit_id": "a148f3ea"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 291,
+          "latency_ms": 345,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -111,9 +111,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 203,
+          "latency_ms": 234,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1692,
+          "circuits_active": 1695,
           "bytes_received": 4,
           "bytes_sent": 3
         },
@@ -141,7 +141,7 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 232,
+          "latency_ms": 273,
           "version": "go1.25.5 X:nodwarf5",
           "circuits_active": 281,
           "bytes_received": 4,
