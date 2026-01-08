@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-01-08T07:51:42.478847942Z",
+  "checked_at": "2026-01-08T08:16:36.681227333Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 2,
@@ -20,20 +20,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 233,
+          "latency_ms": 201,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2014,
+          "circuits_active": 2018,
           "bytes_received": 1,
           "bytes_sent": 4
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 599,
-          "circuit_id": "8a3452d4"
+          "latency_ms": 555,
+          "circuit_id": "14bca104"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 345,
+          "latency_ms": 328,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 229,
+          "latency_ms": 203,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1220,
+          "circuits_active": 1222,
           "bytes_received": 8,
           "bytes_sent": 3
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 594,
-          "circuit_id": "2acbba74"
+          "latency_ms": 566,
+          "circuit_id": "6f370f96"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 323,
+          "latency_ms": 291,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -81,9 +81,9 @@
       "status": "offline",
       "checks": {
         "metrics": {
-          "status": "timeout",
+          "status": "failed",
           "latency_ms": 0,
-          "error": "timeout"
+          "error": "Get \"http://80.78.27.23:9090/metrics\": dial tcp 80.78.27.23:9090: connect: connection refused"
         },
         "circuit": {
           "status": "ok",
@@ -111,9 +111,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 232,
+          "latency_ms": 206,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1734,
+          "circuits_active": 1737,
           "bytes_received": 5,
           "bytes_sent": 3
         },
@@ -141,7 +141,7 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 269,
+          "latency_ms": 240,
           "version": "go1.25.5 X:nodwarf5",
           "circuits_active": 285,
           "bytes_received": 4,
