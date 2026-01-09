@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-01-09T22:35:28.423323599Z",
+  "checked_at": "2026-01-09T22:51:53.257189639Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 5,
@@ -20,20 +20,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 260,
+          "latency_ms": 237,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 262,
+          "circuits_active": 267,
           "bytes_received": 3,
-          "bytes_sent": 145004
+          "bytes_sent": 146732
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 655,
-          "circuit_id": "50b019bd"
+          "latency_ms": 616,
+          "circuit_id": "ee625bb6"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 389,
+          "latency_ms": 456,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 251,
+          "latency_ms": 239,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 116,
+          "circuits_active": 118,
           "bytes_received": 2,
-          "bytes_sent": 101348
+          "bytes_sent": 101924
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 646,
-          "circuit_id": "c8ee3119"
+          "latency_ms": 616,
+          "circuit_id": "7e99598f"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 362,
+          "latency_ms": 327,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -82,20 +82,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 255,
+          "latency_ms": 241,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 166,
-          "bytes_received": 805800,
-          "bytes_sent": 40736
+          "circuits_active": 169,
+          "bytes_received": 815204,
+          "bytes_sent": 40996
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 655,
-          "circuit_id": "59984cfd"
+          "latency_ms": 612,
+          "circuit_id": "21ce9c0d"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 352,
+          "latency_ms": 329,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -113,21 +113,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 276,
+          "latency_ms": 242,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 213,
-          "bytes_received": 542432,
-          "bytes_sent": 12916
+          "circuits_active": 217,
+          "bytes_received": 546272,
+          "bytes_sent": 13408
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 643,
-          "circuit_id": "b20d58f5"
+          "latency_ms": 608,
+          "circuit_id": "118ea959"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 223,
-          "status_code": 502,
+          "latency_ms": 636,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -143,20 +143,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 294,
+          "latency_ms": 274,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 338,
+          "circuits_active": 339,
           "bytes_received": 5,
-          "bytes_sent": 450664
+          "bytes_sent": 450924
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 688,
-          "circuit_id": "f5bb5e81"
+          "latency_ms": 659,
+          "circuit_id": "b995031e"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 669,
+          "latency_ms": 401,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
