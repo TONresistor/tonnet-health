@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-01-15T13:51:06.883047752Z",
+  "checked_at": "2026-01-15T14:15:34.827062303Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 5,
@@ -20,21 +20,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 212,
+          "latency_ms": 276,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1806,
+          "circuits_active": 1811,
           "bytes_received": 1,
-          "bytes_sent": 703232
+          "bytes_sent": 704580
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 586,
-          "circuit_id": "52fac70d"
+          "latency_ms": 663,
+          "circuit_id": "ccb4f5a0"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 148,
-          "status_code": 502,
+          "latency_ms": 396,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -51,21 +51,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 213,
+          "latency_ms": 276,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 735,
+          "circuits_active": 737,
           "bytes_received": 8,
-          "bytes_sent": 425804
+          "bytes_sent": 426340
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 601,
-          "circuit_id": "0103610a"
+          "latency_ms": 693,
+          "circuit_id": "b7dc0133"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 131,
-          "status_code": 502,
+          "latency_ms": 384,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -82,21 +82,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 213,
+          "latency_ms": 277,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1093,
+          "circuits_active": 1096,
           "bytes_received": 3,
-          "bytes_sent": 120816
+          "bytes_sent": 121036
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 573,
-          "circuit_id": "82a0b39d"
+          "latency_ms": 661,
+          "circuit_id": "fc29fda3"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 127,
-          "status_code": 502,
+          "latency_ms": 353,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -113,20 +113,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 215,
+          "latency_ms": 279,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1448,
+          "circuits_active": 1452,
           "bytes_received": 5,
-          "bytes_sent": 228124
+          "bytes_sent": 228384
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 572,
-          "circuit_id": "a4466d42"
+          "latency_ms": 667,
+          "circuit_id": "7d2e8355"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 357,
+          "latency_ms": 552,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -143,20 +143,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 244,
+          "latency_ms": 306,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 651,
+          "circuits_active": 652,
           "bytes_received": 8,
-          "bytes_sent": 614904
+          "bytes_sent": 615164
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 620,
-          "circuit_id": "14194f23"
+          "latency_ms": 716,
+          "circuit_id": "0e0ff8db"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 372,
+          "latency_ms": 438,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
