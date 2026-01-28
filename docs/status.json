@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-01-28T09:52:53.78887837Z",
+  "checked_at": "2026-01-28T10:17:16.492290716Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 5,
@@ -20,20 +20,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 238,
+          "latency_ms": 281,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 5590,
+          "circuits_active": 5595,
           "bytes_received": 5,
           "bytes_sent": 2
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 627,
-          "circuit_id": "a55865d2"
+          "latency_ms": 673,
+          "circuit_id": "8c688888"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 345,
+          "latency_ms": 641,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 236,
+          "latency_ms": 274,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2490,
+          "circuits_active": 2492,
           "bytes_received": 4,
           "bytes_sent": 2
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 600,
-          "circuit_id": "e4a67044"
+          "latency_ms": 690,
+          "circuit_id": "d49ccdb8"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 322,
+          "latency_ms": 364,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -82,20 +82,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 237,
+          "latency_ms": 281,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3572,
+          "circuits_active": 3575,
           "bytes_received": 4,
           "bytes_sent": 2
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 608,
-          "circuit_id": "b79d7ca7"
+          "latency_ms": 665,
+          "circuit_id": "5ab08720"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 320,
+          "latency_ms": 362,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -113,21 +113,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 230,
+          "latency_ms": 274,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4569,
+          "circuits_active": 4573,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 608,
-          "circuit_id": "8626a6da"
+          "latency_ms": 665,
+          "circuit_id": "3ae3782e"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 206,
-          "status_code": 502,
+          "latency_ms": 388,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -143,20 +143,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 273,
+          "latency_ms": 318,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1541,
+          "circuits_active": 1542,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 658,
-          "circuit_id": "0502c221"
+          "latency_ms": 715,
+          "circuit_id": "91ee1722"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 402,
+          "latency_ms": 423,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
