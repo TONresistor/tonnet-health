@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-01-31T20:12:37.743677892Z",
+  "checked_at": "2026-01-31T20:39:23.058755034Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 5,
@@ -20,20 +20,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 215,
+          "latency_ms": 250,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 115,
-          "bytes_received": 858640,
-          "bytes_sent": 36156
+          "circuits_active": 120,
+          "bytes_received": 898256,
+          "bytes_sent": 37680
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 592,
-          "circuit_id": "d30c624f"
+          "latency_ms": 620,
+          "circuit_id": "2a833e92"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 589,
+          "latency_ms": 391,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 214,
+          "latency_ms": 246,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 47,
-          "bytes_received": 353736,
-          "bytes_sent": 14352
+          "circuits_active": 49,
+          "bytes_received": 369908,
+          "bytes_sent": 14928
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 581,
-          "circuit_id": "a7bb8da8"
+          "latency_ms": 631,
+          "circuit_id": "1cc8fd0e"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 307,
+          "latency_ms": 340,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -82,20 +82,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 223,
+          "latency_ms": 251,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 69,
-          "bytes_received": 225028,
-          "bytes_sent": 5980
+          "circuits_active": 72,
+          "bytes_received": 234824,
+          "bytes_sent": 6240
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 587,
-          "circuit_id": "364baa9c"
+          "latency_ms": 651,
+          "circuit_id": "a69faafe"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 317,
+          "latency_ms": 352,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -113,20 +113,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 220,
+          "latency_ms": 230,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 95,
-          "bytes_received": 236052,
-          "bytes_sent": 6212
+          "circuits_active": 99,
+          "bytes_received": 246564,
+          "bytes_sent": 6472
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 576,
-          "circuit_id": "01f8e8de"
+          "latency_ms": 626,
+          "circuit_id": "364f83d4"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 581,
+          "latency_ms": 364,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -143,20 +143,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 262,
+          "latency_ms": 283,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1648,
+          "circuits_active": 1649,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 624,
-          "circuit_id": "6314e504"
+          "latency_ms": 669,
+          "circuit_id": "7141d1d4"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 374,
+          "latency_ms": 401,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
