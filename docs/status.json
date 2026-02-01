@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-02-01T21:54:31.878760088Z",
+  "checked_at": "2026-02-01T22:12:25.446469662Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 5,
@@ -20,21 +20,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 281,
+          "latency_ms": 193,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 360,
+          "circuits_active": 365,
           "bytes_received": 2,
-          "bytes_sent": 111704
+          "bytes_sent": 113188
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 678,
-          "circuit_id": "b6d54b0d"
+          "latency_ms": 547,
+          "circuit_id": "c41f5d90"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 624,
-          "status_code": 502,
+          "latency_ms": 320,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 285,
+          "latency_ms": 193,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 145,
+          "circuits_active": 147,
           "bytes_received": 1,
-          "bytes_sent": 42916
+          "bytes_sent": 43492
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 677,
-          "circuit_id": "1fd373c7"
+          "latency_ms": 553,
+          "circuit_id": "a40b294e"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 387,
+          "latency_ms": 284,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -82,20 +82,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 289,
+          "latency_ms": 193,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 216,
-          "bytes_received": 704604,
-          "bytes_sent": 18720
+          "circuits_active": 219,
+          "bytes_received": 714416,
+          "bytes_sent": 18980
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 677,
-          "circuit_id": "7c7c771a"
+          "latency_ms": 546,
+          "circuit_id": "d4986ee6"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 373,
+          "latency_ms": 351,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -113,21 +113,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 290,
+          "latency_ms": 192,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 291,
-          "bytes_received": 737448,
-          "bytes_sent": 19416
+          "circuits_active": 295,
+          "bytes_received": 747956,
+          "bytes_sent": 19676
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 682,
-          "circuit_id": "1ddca4ec"
+          "latency_ms": 557,
+          "circuit_id": "5d8d7ffd"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 412,
-          "status_code": 200,
+          "latency_ms": 140,
+          "status_code": 502,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -143,20 +143,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 327,
+          "latency_ms": 239,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1697,
+          "circuits_active": 1698,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 731,
-          "circuit_id": "97e64242"
+          "latency_ms": 597,
+          "circuit_id": "8856e8ed"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 442,
+          "latency_ms": 359,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
