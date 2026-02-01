@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-02-01T11:52:20.92528805Z",
+  "checked_at": "2026-02-01T12:23:24.290846795Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 5,
@@ -20,20 +20,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 185,
+          "latency_ms": 203,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 245,
+          "circuits_active": 250,
           "bytes_received": 1,
-          "bytes_sent": 75984
+          "bytes_sent": 77712
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 538,
-          "circuit_id": "f5a0beb3"
+          "latency_ms": 558,
+          "circuit_id": "00cf3bf1"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 327,
+          "latency_ms": 575,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 185,
+          "latency_ms": 199,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 99,
-          "bytes_received": 774048,
-          "bytes_sent": 29328
+          "circuits_active": 101,
+          "bytes_received": 790196,
+          "bytes_sent": 29904
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 540,
-          "circuit_id": "b3d9d04f"
+          "latency_ms": 546,
+          "circuit_id": "d22e3500"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 291,
+          "latency_ms": 294,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -82,20 +82,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 189,
+          "latency_ms": 193,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 147,
-          "bytes_received": 479440,
-          "bytes_sent": 12740
+          "circuits_active": 150,
+          "bytes_received": 488844,
+          "bytes_sent": 13000
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 535,
-          "circuit_id": "62f9b37e"
+          "latency_ms": 544,
+          "circuit_id": "80639c76"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 319,
+          "latency_ms": 292,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -113,21 +113,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 185,
+          "latency_ms": 195,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 199,
-          "bytes_received": 503112,
-          "bytes_sent": 13204
+          "circuits_active": 203,
+          "bytes_received": 506960,
+          "bytes_sent": 13696
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 536,
-          "circuit_id": "d44d891f"
+          "latency_ms": 545,
+          "circuit_id": "97e671f0"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 208,
-          "status_code": 502,
+          "latency_ms": 343,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -143,20 +143,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 232,
+          "latency_ms": 238,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1674,
+          "circuits_active": 1675,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 593,
-          "circuit_id": "bcd1ecc7"
+          "latency_ms": 601,
+          "circuit_id": "98895eed"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 361,
+          "latency_ms": 362,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
