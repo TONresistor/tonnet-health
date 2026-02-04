@@ -1,11 +1,11 @@
 {
-  "checked_at": "2026-02-04T13:47:57.691552401Z",
+  "checked_at": "2026-02-04T14:35:09.8756601Z",
   "network_health": {
     "total_relays": 5,
-    "healthy": 4,
-    "degraded": 1,
+    "healthy": 5,
+    "degraded": 0,
     "offline": 0,
-    "score": 0.8
+    "score": 1
   },
   "relays": [
     {
@@ -20,20 +20,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 297,
+          "latency_ms": 314,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 707,
+          "circuits_active": 712,
           "bytes_received": 5,
-          "bytes_sent": 219084
+          "bytes_sent": 220608
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 690,
-          "circuit_id": "d7197beb"
+          "latency_ms": 755,
+          "circuit_id": "bbe0a450"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 417,
+          "latency_ms": 477,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -51,20 +51,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 289,
+          "latency_ms": 323,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 284,
+          "circuits_active": 286,
           "bytes_received": 2,
-          "bytes_sent": 83272
+          "bytes_sent": 83848
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 715,
-          "circuit_id": "06b0f406"
+          "latency_ms": 774,
+          "circuit_id": "60b6a785"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 391,
+          "latency_ms": 422,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -82,20 +82,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 290,
+          "latency_ms": 339,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 425,
+          "circuits_active": 428,
           "bytes_received": 1,
-          "bytes_sent": 36620
+          "bytes_sent": 36880
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 705,
-          "circuit_id": "4a4fd82a"
+          "latency_ms": 733,
+          "circuit_id": "9915db1a"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 417,
+          "latency_ms": 429,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -113,20 +113,20 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 302,
+          "latency_ms": 331,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 570,
+          "circuits_active": 574,
           "bytes_received": 1,
-          "bytes_sent": 38696
+          "bytes_sent": 38956
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 680,
-          "circuit_id": "d1555707"
+          "latency_ms": 726,
+          "circuit_id": "6f865b2e"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 655,
+          "latency_ms": 450,
           "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
@@ -139,25 +139,25 @@
         "entry",
         "middle"
       ],
-      "status": "degraded",
+      "status": "healthy",
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 332,
+          "latency_ms": 356,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1767,
+          "circuits_active": 1768,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 732,
-          "circuit_id": "12e9b5e8"
+          "latency_ms": 814,
+          "circuit_id": "d903f1be"
         },
         "http": {
-          "status": "failed",
-          "latency_ms": 20007,
-          "error": "exit status 28",
+          "status": "ok",
+          "latency_ms": 498,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
