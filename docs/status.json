@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-02-13T14:33:54.163531642Z",
+  "checked_at": "2026-02-13T15:24:56.847338908Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 5,
@@ -20,21 +20,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 184,
+          "latency_ms": 273,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2225,
+          "circuits_active": 2230,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 539,
-          "circuit_id": "2267d8b6"
+          "latency_ms": 646,
+          "circuit_id": "56597a4c"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 6762,
-          "status_code": 502,
+          "latency_ms": 505,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -51,21 +51,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 189,
+          "latency_ms": 269,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 997,
+          "circuits_active": 999,
           "bytes_received": 8,
-          "bytes_sent": 399492
+          "bytes_sent": 400380
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 541,
-          "circuit_id": "c3e8795d"
+          "latency_ms": 675,
+          "circuit_id": "adbc792b"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 6935,
-          "status_code": 502,
+          "latency_ms": 359,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -82,21 +82,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 240,
+          "latency_ms": 270,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1386,
+          "circuits_active": 1389,
           "bytes_received": 9,
-          "bytes_sent": 411732
+          "bytes_sent": 412304
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 565,
-          "circuit_id": "c67f60fe"
+          "latency_ms": 658,
+          "circuit_id": "3e4a2547"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 6954,
-          "status_code": 502,
+          "latency_ms": 365,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -113,21 +113,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 184,
+          "latency_ms": 268,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1799,
+          "circuits_active": 1803,
           "bytes_received": 5,
-          "bytes_sent": 153596
+          "bytes_sent": 154168
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 544,
-          "circuit_id": "996cc8f5"
+          "latency_ms": 655,
+          "circuit_id": "cdff7337"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 6737,
-          "status_code": 502,
+          "latency_ms": 500,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -143,21 +143,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 230,
+          "latency_ms": 304,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2111,
+          "circuits_active": 2112,
           "bytes_received": 2,
           "bytes_sent": 1
         },
         "circuit": {
           "status": "ok",
-          "latency_ms": 597,
-          "circuit_id": "e2d9fc97"
+          "latency_ms": 687,
+          "circuit_id": "35271f2c"
         },
         "http": {
           "status": "ok",
-          "latency_ms": 6806,
-          "status_code": 502,
+          "latency_ms": 494,
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
