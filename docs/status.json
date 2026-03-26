@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-03-26T04:05:59.272011508Z",
+  "checked_at": "2026-03-26T05:48:34.31899423Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 263,
+          "latency_ms": 218,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4948,
+          "circuits_active": 4965,
           "bytes_received": 5,
           "bytes_sent": 3
         },
@@ -51,9 +51,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 274,
+          "latency_ms": 219,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2402,
+          "circuits_active": 2422,
           "bytes_received": 3,
           "bytes_sent": 3
         },
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 272,
+          "latency_ms": 220,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3257,
+          "circuits_active": 3271,
           "bytes_received": 8,
           "bytes_sent": 3
         },
@@ -113,21 +113,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 251,
+          "latency_ms": 220,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4084,
+          "circuits_active": 4104,
           "bytes_received": 7,
           "bytes_sent": 3
         },
         "circuit": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"
+          "error": "circuit build timeout"
         },
         "http": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+          "error": "circuit build timeout",
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -143,9 +143,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 281,
+          "latency_ms": 249,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1415,
+          "circuits_active": 1420,
           "bytes_received": 3,
           "bytes_sent": 2
         },
