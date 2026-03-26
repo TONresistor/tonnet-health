@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-03-26T01:13:49.097388458Z",
+  "checked_at": "2026-03-26T04:05:59.272011508Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 315,
+          "latency_ms": 263,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4938,
+          "circuits_active": 4948,
           "bytes_received": 5,
           "bytes_sent": 3
         },
@@ -51,11 +51,11 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 313,
+          "latency_ms": 274,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2396,
+          "circuits_active": 2402,
           "bytes_received": 3,
-          "bytes_sent": 2
+          "bytes_sent": 3
         },
         "circuit": {
           "status": "failed",
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 314,
+          "latency_ms": 272,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3246,
+          "circuits_active": 3257,
           "bytes_received": 8,
           "bytes_sent": 3
         },
@@ -113,21 +113,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 316,
+          "latency_ms": 251,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4073,
+          "circuits_active": 4084,
           "bytes_received": 7,
           "bytes_sent": 3
         },
         "circuit": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout"
+          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"
         },
         "http": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout",
+          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -143,9 +143,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 324,
+          "latency_ms": 281,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1407,
+          "circuits_active": 1415,
           "bytes_received": 3,
           "bytes_sent": 2
         },
