@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-03-29T01:16:12.802431281Z",
+  "checked_at": "2026-03-29T04:14:14.984315915Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 241,
+          "latency_ms": 240,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 5493,
+          "circuits_active": 5508,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -51,11 +51,11 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 239,
+          "latency_ms": 240,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2686,
+          "circuits_active": 2695,
           "bytes_received": 5,
-          "bytes_sent": 3
+          "bytes_sent": 4
         },
         "circuit": {
           "status": "failed",
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 239,
+          "latency_ms": 243,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3626,
+          "circuits_active": 3647,
           "bytes_received": 9,
           "bytes_sent": 4
         },
@@ -113,11 +113,11 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 235,
+          "latency_ms": 241,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 84,
-          "bytes_received": 9,
-          "bytes_sent": 121084
+          "circuits_active": 107,
+          "bytes_received": 1,
+          "bytes_sent": 175512
         },
         "circuit": {
           "status": "failed",
@@ -143,9 +143,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 267,
+          "latency_ms": 263,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1544,
+          "circuits_active": 1550,
           "bytes_received": 3,
           "bytes_sent": 3
         },
