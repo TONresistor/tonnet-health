@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-03-31T16:46:07.932560489Z",
+  "checked_at": "2026-03-31T17:46:17.162672991Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 207,
+          "latency_ms": 352,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 5923,
+          "circuits_active": 5927,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -51,9 +51,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 206,
+          "latency_ms": 338,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2929,
+          "circuits_active": 2931,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 212,
+          "latency_ms": 337,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3947,
+          "circuits_active": 3949,
           "bytes_received": 9,
           "bytes_sent": 4
         },
@@ -113,10 +113,10 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 206,
+          "latency_ms": 328,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 12,
-          "bytes_received": 273652,
+          "circuits_active": 16,
+          "bytes_received": 274448,
           "bytes_sent": 55064
         },
         "circuit": {
@@ -143,7 +143,7 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 230,
+          "latency_ms": 344,
           "version": "go1.25.5 X:nodwarf5",
           "circuits_active": 1657,
           "bytes_received": 4,
@@ -152,12 +152,12 @@
         "circuit": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"
+          "error": "circuit build timeout"
         },
         "http": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
+          "error": "circuit build timeout",
           "test_site": "tonnet-sync-check.ton"
         }
       }
