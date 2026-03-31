@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-03-31T15:50:45.012290347Z",
+  "checked_at": "2026-03-31T16:46:07.932560489Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 219,
+          "latency_ms": 207,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 5917,
+          "circuits_active": 5923,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -51,9 +51,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 220,
+          "latency_ms": 206,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 2927,
+          "circuits_active": 2929,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 225,
+          "latency_ms": 212,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3943,
+          "circuits_active": 3947,
           "bytes_received": 9,
           "bytes_sent": 4
         },
@@ -113,10 +113,10 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 215,
+          "latency_ms": 206,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 8,
-          "bytes_received": 272860,
+          "circuits_active": 12,
+          "bytes_received": 273652,
           "bytes_sent": 55064
         },
         "circuit": {
@@ -143,21 +143,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 239,
+          "latency_ms": 230,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1654,
+          "circuits_active": 1657,
           "bytes_received": 4,
           "bytes_sent": 3
         },
         "circuit": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout"
+          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"
         },
         "http": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout",
+          "error": "  [!] Bitcoin BNS (.btc): BNS API check failed: Get \"https://api.mainnet.hiro.so/v1/names/btc.btc\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)",
           "test_site": "tonnet-sync-check.ton"
         }
       }
