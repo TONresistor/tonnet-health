@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-06T18:03:18.765950611Z",
+  "checked_at": "2026-04-06T19:18:01.103569113Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 207,
+          "latency_ms": 221,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 6632,
+          "circuits_active": 6637,
           "bytes_received": 7,
           "bytes_sent": 4
         },
@@ -51,9 +51,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 206,
+          "latency_ms": 211,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3225,
+          "circuits_active": 3227,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -84,7 +84,7 @@
           "status": "ok",
           "latency_ms": 209,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4269,
+          "circuits_active": 4272,
           "bytes_received": 1,
           "bytes_sent": 4
         },
@@ -113,10 +113,10 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 207,
+          "latency_ms": 209,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 24,
-          "bytes_received": 4996
+          "circuits_active": 28,
+          "bytes_received": 5796
         },
         "circuit": {
           "status": "failed",
@@ -144,7 +144,7 @@
           "status": "ok",
           "latency_ms": 231,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 1775,
+          "circuits_active": 1776,
           "bytes_received": 4,
           "bytes_sent": 3
         },
