@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-11T05:20:44.414689811Z",
+  "checked_at": "2026-04-11T06:35:45.984326451Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 265,
+          "latency_ms": 239,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 6983,
+          "circuits_active": 6986,
           "bytes_received": 7,
           "bytes_sent": 4
         },
@@ -51,9 +51,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 273,
+          "latency_ms": 216,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3383,
+          "circuits_active": 3385,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 268,
+          "latency_ms": 222,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4432,
+          "circuits_active": 4433,
           "bytes_received": 1,
           "bytes_sent": 4
         },
@@ -140,9 +140,9 @@
       "status": "offline",
       "checks": {
         "metrics": {
-          "status": "timeout",
+          "status": "failed",
           "latency_ms": 0,
-          "error": "timeout"
+          "error": "Get \"http://46.62.171.242:9090/metrics\": dial tcp 46.62.171.242:9090: connect: connection refused"
         },
         "circuit": {
           "status": "ok",
