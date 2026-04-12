@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-12T10:36:35.076541614Z",
+  "checked_at": "2026-04-12T11:20:12.834313145Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 335,
+          "latency_ms": 222,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 7071,
+          "circuits_active": 7075,
           "bytes_received": 7,
           "bytes_sent": 4
         },
@@ -51,9 +51,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 341,
+          "latency_ms": 215,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3430,
+          "circuits_active": 3432,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 347,
+          "latency_ms": 225,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4445,
+          "circuits_active": 4447,
           "bytes_received": 1,
           "bytes_sent": 4
         },
@@ -113,10 +113,10 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 327,
+          "latency_ms": 216,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 28,
-          "bytes_received": 19208,
+          "circuits_active": 32,
+          "bytes_received": 19996,
           "bytes_sent": 1876
         },
         "circuit": {
@@ -142,9 +142,9 @@
       "status": "offline",
       "checks": {
         "metrics": {
-          "status": "failed",
+          "status": "timeout",
           "latency_ms": 0,
-          "error": "Get \"http://46.62.171.242:9090/metrics\": dial tcp 46.62.171.242:9090: connect: connection refused"
+          "error": "timeout"
         },
         "circuit": {
           "status": "ok",
