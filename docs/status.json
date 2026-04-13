@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-04-13T11:58:43.429264739Z",
+  "checked_at": "2026-04-13T13:18:45.190339652Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
-    "degraded": 4,
-    "offline": 1,
+    "degraded": 3,
+    "offline": 2,
     "score": 0
   },
   "relays": [
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 222,
+          "latency_ms": 291,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 7180,
+          "circuits_active": 7184,
           "bytes_received": 7,
           "bytes_sent": 4
         },
@@ -51,9 +51,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 219,
+          "latency_ms": 273,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3486,
+          "circuits_active": 3488,
           "bytes_received": 6,
           "bytes_sent": 4
         },
@@ -82,9 +82,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 217,
+          "latency_ms": 290,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4503,
+          "circuits_active": 4505,
           "bytes_received": 1,
           "bytes_sent": 5
         },
@@ -109,25 +109,23 @@
         "middle",
         "exit"
       ],
-      "status": "degraded",
+      "status": "offline",
       "checks": {
         "metrics": {
-          "status": "ok",
-          "latency_ms": 219,
-          "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 96,
-          "bytes_received": 2,
-          "bytes_sent": 209716
+          "status": "timeout",
+          "latency_ms": 0,
+          "error": "timeout"
         },
         "circuit": {
-          "status": "failed",
+          "status": "ok",
           "latency_ms": 0,
-          "error": "circuit build timeout"
+          "circuit_id": "test-circuit",
+          "role_tested": "middle"
         },
         "http": {
-          "status": "failed",
+          "status": "ok",
           "latency_ms": 0,
-          "error": "circuit build timeout",
+          "status_code": 200,
           "test_site": "tonnet-sync-check.ton"
         }
       }
