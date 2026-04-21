@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-04-21T08:14:36.347013094Z",
+  "checked_at": "2026-04-21T09:52:38.165480502Z",
   "network_health": {
     "total_relays": 5,
     "healthy": 0,
@@ -20,9 +20,9 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 332,
+          "latency_ms": 327,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 7781,
+          "circuits_active": 7785,
           "bytes_received": 7,
           "bytes_sent": 4
         },
@@ -51,21 +51,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 332,
+          "latency_ms": 346,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 3792,
+          "circuits_active": 3794,
           "bytes_received": 6,
           "bytes_sent": 4
         },
         "circuit": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout"
+          "error": "  [!] Unstoppable Domains (.zil): no working RPC found for .crypto: RPC check failed for https://polygon-bor-rpc.publicnode.com: Post \"https://polygon-bor-rpc.publicnode.com\": context deadline exceeded"
         },
         "http": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout",
+          "error": "  [!] Unstoppable Domains (.zil): no working RPC found for .crypto: RPC check failed for https://polygon-bor-rpc.publicnode.com: Post \"https://polygon-bor-rpc.publicnode.com\": context deadline exceeded",
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -82,21 +82,21 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 335,
+          "latency_ms": 345,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 4779,
+          "circuits_active": 4781,
           "bytes_received": 1,
           "bytes_sent": 5
         },
         "circuit": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout"
+          "error": "  [!] Unstoppable Domains (.zil): no working RPC found for .crypto: RPC check failed for https://polygon-bor-rpc.publicnode.com: 429 Too Many Requests: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1}"
         },
         "http": {
           "status": "failed",
           "latency_ms": 0,
-          "error": "circuit build timeout",
+          "error": "  [!] Unstoppable Domains (.zil): no working RPC found for .crypto: RPC check failed for https://polygon-bor-rpc.publicnode.com: 429 Too Many Requests: {\"jsonrpc\":\"2.0\",\"error\":{\"code\":-32005,\"message\":\"Rate limit exceeded. To obtain higher limits, please request a personal token or a dedicated node: https://www.allnodes.com/publicnode\"},\"id\":1}",
           "test_site": "tonnet-sync-check.ton"
         }
       }
@@ -113,10 +113,10 @@
       "checks": {
         "metrics": {
           "status": "ok",
-          "latency_ms": 324,
+          "latency_ms": 344,
           "version": "go1.25.5 X:nodwarf5",
-          "circuits_active": 57,
-          "bytes_received": 28404,
+          "circuits_active": 59,
+          "bytes_received": 28964,
           "bytes_sent": 940
         },
         "circuit": {
