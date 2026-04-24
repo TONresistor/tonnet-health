@@ -1,10 +1,8 @@
 # tonnet-health
 
+> ⚠️ **Archived.** TONNET has migrated from a custom relay stack ([`tonnet-relay`](https://github.com/TONresistor/tonnet-relay)) to TON's native ADNL tunnel ([`adnl-tunnel`](https://github.com/ton-blockchain/adnl-tunnel)). This health checker is no longer maintained.
+
 Health checker for TONNET relay network.
-
-## Status
-
-**Live Dashboard:** https://tonresistor.github.io/tonnet-health/
 
 ## What it does
 
